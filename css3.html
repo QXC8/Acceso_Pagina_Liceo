@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos3.css">
+    <link rel="stylesheet" href="../normalize.css">
+    <title>Clase-CSS</title>
+</head>
+<body>
+    <center>
+    <h1>Apuntes CSS-3</h1>
+    </center>
+
+    <div>
+        <a href="#ejemplo-position-fixed" id="position-fixed">position: fixed;</a>
+    </div>
+
+
+
+    <div id="div">
+        <article>
+            <section class="section">
+                <br>
+
+                <p><b>box-shadow:</b> el box-shadow es una propiedad que sirve para ponerle sombras a 
+                las cajas, ejemplo:</p>
+
+                <br><br>
+
+                <center>
+
+                    <div class="codigo">
+                    #id{<br>
+                    box-shadow: 2px 4px 15px 10px #000;<br>
+                    }</div>
+                    <img src="carpeta2/arbolejemplo.png" id="img-arbol1">
+
+                    <p class="p-center">con los primeros pixeles que ponemos después del ";" son para indicar el
+                        "eje X" y los segundos pixeles son para indicar el "eje Y" de la caja,
+                        después marcamos los pixeles del tamaño del desenfoque, después cuanto
+                        borde va a tener la sombra <b>(generalmente se le da 0),</b> y después
+                        se indica el color de la sombra
+                    </p>
+
+                    <div class="codigo">
+                        #id{<br>
+                        box-shadow: -4px -8px 15px 5px rgb(255, 255, 255);<br>
+                        }</div>
+
+                        <img src="carpeta2/arbolejemplo.png" id="img-arbol2">
+                        </center>
+
+            <br><br>
+
+            <p><b>text-shadow:</b> text-shadow también es para agregar sombras, pero en
+            lugar de dárselas a las cajas, esta se las da a las palabras, ejemplo:</p> 
+
+            <br>
+
+            <center>
+                <div class="codigo">
+                    #id{<br>
+                    text-shadow: 2px 2px 7px #fff;<br>
+                    }</div>
+            <div id="div-texto-sombra">
+                <span>Hola! soy un texto de ejemplo :D</span>
+            </div>
+
+            <br>
+
+            <p class="p-center"><b class="b-importante">IMPORTANTE:</b> el cuarto pixel en text-shadow, no se tiene que poner ya
+            que el text-shadow no necesita borde para funcionar, y también es <b class="b-importante">importante</b>
+        decir que podemos hacer el efecto con mayor intensidad haciendo lo siguiente:</p>
+
+        <br>
+
+        <div class="codigo-largo">
+            #id{<br>
+            text-shadow: 2px 2px 7px #fff, 2px 2px 7px #fff;<br>
+            }</div>
+    <div id="div-texto-sombra-2">
+        <span>Hola! soy otro texto de ejemplo :D</span>
+    </div>
+
+            </center>
+            <br><br>
+        </section>
+
+        <section>
+
+            <p><b>outline:</b> la propiedad outline es algo así como la propiedad "border" pero la diferencia
+            es que outline si ocupa espacio de la caja a la que se le aplica, por ejemplo, si una caja tiene
+        un "border-color: red;", la caja ocuparía espacio al interior de la misma, sin interrumpir a las demás cajas,
+        asi que lo que hace outline es marcar fuera de la caja a la cual se le aplica pero tampoco interrumpe
+        la posición de otras cajas, ejemplo:
+    </p>
+    <br>
+
+    <center>
+    <div class="codigo-largo">
+        #id{<br>
+            background-color: #000;<br>
+            height: 150px;<br>
+            width: 150px;<br>
+            margin: auto;<br>
+            outline: 10px solid blue;<br>
+        }</div>
+
+        <input type="text" class="input-1">
+        <br>
+        <br>
+            <p class="p-center">como se puede ver el input tiene un outline
+            de 10px de color azul, el outline a diferencia del "border" no ocupan espacio, es
+            decir que se pueden ver, pero al momento de chocar con otra caja, el outline solo
+            le pasara por encima y no la moverá, ejemplo:
+            </p>
+            <br><br><br>
+
+            <div class="codigo-largo">
+                #id{<br>
+                    color: rgb(0, 0, 0);<br>
+                    background-color: rgb(251, 251, 251);<br>
+                    height: 150px;<br>
+                    width: 150px;<br>
+                    outline: 30px solid rgb(32, 31, 31);<br>
+                }</div>
+
+                <input type="text" class="input-2">
+                <br><br>
+                <p class="p-center">Hola! soy un texto de ejemplo :D</p>
+                <br><br><br>
+                <p class="p-center">otro ejemplo de outline:</p>
+                <br>
+
+                <div class="codigo-html-largo-especial">
+                    div class="caja-outline1"> /div> div class="caja-outline2"> /div>div class="caja-outline3"> /div>
+                </div>
+
+                <div class="codigo-largo">
+                    .caja-outline1, .caja-outline2, .caja-outline3{<br>
+                        width: 150px;<br>
+                        height: 150px;<br>
+                        background-color: white;<br>
+                        display: inline-block;<br>
+                        outline: 5px solid black;<br>
+                    }</div>
+
+                <div class="caja-outline1"></div><div class="caja-outline2"></div><div class="caja-outline3"></div>
+                <br><br><br>
+        </center>
+
+        </section>
+        <section>
+            <center>
+        <p><b>position:</b> position es una propiedad que sirve para posicionar un elemento
+        usando: <b>"top", "right", "bottom" y "left",</b> ejemplo:</p>
+
+        <div class="codigo">
+            #id{<br>
+                width: 160px;<br>
+                height: 160px;<br>
+                background-color: white;<br>
+                position: static;<br>
+            }</div>
+            <div id="div-position"></div>
+        </center>
+        <center>
+
+            <div class="codigo-largo">
+                #id{<br>
+                    width: 100px;<br>
+                    height: 100px;<br>
+                    background-color: white;<br>
+                    position: relative;<br>
+                    top: -150px;<br>
+                    right: -140px;<br>
+                }</div>
+                <input id="input-position__1" readonly value="holiwis jejeje">
+                <br>
+                <p class="p-center"><b class="b-importante">IMPORTANTE:</b> "position: static;" es para dejar el 
+                elemento en default, ya que no le hacemos ningún cambio, y con "position: relative;"
+            se pueden usar el: <b>"top", "right", "bottom" y "left"</b></p>
+            <br><br>
+            <p class="p-center"><b class="b-importante">IMPORTANTE:</b> se pueden usar <b>"top", "right", "bottom" y "left"</b>,
+            pero hay que recordar que los 2 mas importante son <b>"top" y "right", ya que
+                si usamos bottom y top al mismo tiempo, al que tomara sin importar la posición
+                sera al top, ya que es mas importante
+            </b></p>
+            <br><br>
+            <p class="p-center"><b class="b-importante">IMPORTANTE:</b> aunque modifiquemos
+            la posición de algún elemento de HTML con la propiedad "position", el elemento
+        al que lo cambiemos de posición, seguirá ocupando su lugar, solo que su caja estará 
+    en otra parte</p>
+    <br><br>
+
+            </center>
+            <p><b>z-index:</b> z-index solo se puede utilizar si ponemos en un elemento
+            "position: relative;" en CSS, y sirve para poner elementos encima de otros 
+        para cuando usemos <b>"top" y "right",</b> ejemplo:</p>
+        <center>
+    <br>
+    <div class="codigo-codigo">
+        #codigo-largo__z-index{<br>
+            color: white;<br>
+            background-color: black;<br>
+            margin-bottom: 25px;<br>
+            margin-top: 25px;<br>
+            padding: 30px;<br>
+            width: 400px;<br>
+            height: 200px;<br>
+            position: relative;<br>
+            z-index: 50;<br>
+        }</div>
+        <div id="codigo-largo__z-index">
+            #id{<br>
+                width: 100px;<br>
+                height: 100px;<br>
+                background-color: white;<br>
+                position: relative;<br>
+                top: -100px;<br>
+                right: -160px;<br>
+            }</div>
+            <div>
+        <input id="input-position__2" readonly value="No me ves jiji">
+        <p class="p-center"><b class="b-importante">IMPORTANTE:</b> todo elemento con un
+        "position: relative;" ya tiene un z-index, solo que este esta en 0, lo que significa
+    que si a un elemento le ponemos "position: relative;", automáticamente se pondrá
+    encima de cualquier elemento</p>
+    <br><br><br>
+    </center>
+
+    <p><b>position: absolute;</b> se usa para "desaparecer" el elemento que estamos modificando
+    es decir, el objeto al que le damos la propiedad "position: absolute;" ya no ocupa espacio
+    en la pagina, pero si le damos opacidad y lo movemos de lugar, se podrá ver, ejemplo:</p>
+
+<div id="cajas__position-absolute">
+
+    <div id="codigo-position-absolute">
+        .div-position-absolute-1{<br>
+        background-color: yellow;<br>
+        width: 220px;<br>
+        height: 220px;<br>
+        position: absolute;<br>
+        opacity: .1;<br>
+        left: 12.3%;<br>
+        margin-top: 3%;<br>
+        z-index: 100;<br>
+    }</div>
+
+    <div id="codigo-position-absolute">
+        .div-position-absolute-2{<br>
+        background-color: blue;<br>
+        width: 220px;<br>
+        height: 220px;<br>
+        position: absolute;<br>
+        opacity: .5;<br>
+        left: 42.3%;<br>
+        margin-top: 3%;<br>
+        z-index: 50;<br>
+    }</div>
+
+    <div id="codigo-position-absolute">
+        .div-position-absolute-3{<br>
+        background-color: red;<br>
+        width: 220px;<br>
+        height: 220px;<br>
+        position: absolute;<br>
+        opacity: 1;<br>
+        left: 72.3%;<br>
+        margin-top: 3%;<br>
+        z-index: 0;<br>
+    }</div>
+
+    <div class="div-position-absolute-1">
+
+    </div>
+
+    <div class="div-position-absolute-2">
+
+    </div>
+
+    <div class="div-position-absolute-3">
+
+    </div>
+
+</div>
+
+
+<div id="ejemplos-position-absolute-divs">
+    <p class="p-ejemplo-position-absolute-div-padre"><b class="b-importante">IMPORTANTE:</b> también se puede usar esto
+        para modificar la position de las cajas dentro de una caja "div padre", ejemplo:</p>
+    
+
+    
+    <div class="codigo-ejemplos-position-absolute-1">
+        .div-rojo-position-absolute-1{<br>
+            top: 0;<br>
+            }
+    </div>
+    <div class="codigo-ejemplos-position-absolute-2">
+        .div-rojo-position-absolute-2{<br>
+            right: 0;<br>
+            }
+    </div>
+    <div class="codigo-ejemplos-position-absolute-3">
+        .div-rojo-position-absolute-3{<br>
+            bottom: 0;<br>
+            }
+    </div>
+    <div class="codigo-ejemplos-position-absolute-4">
+        .div-rojo-position-absolute-4{<br>
+            right: 0;<br>
+            bottom: 0;<br>
+            }
+    </div>
+    <div class="codigo-ejemplos-position-absolute-5">
+        .codigo-ejemplos-position-absolute-5{<br>
+        top: 0;<br>
+        left: 0;<br>
+        right: 0;<br>
+        bottom: 0;<br>
+        margin: auto;<br>
+    }
+    </div>
+
+
+    
+    <div id="div-padre-position-absolute">
+        <div class="div-rojo-position-absolute-1">caja 1</div>
+        <div class="div-rojo-position-absolute-2">caja 2</div>
+        <div class="div-rojo-position-absolute-3">caja 3</div>
+        <div class="div-rojo-position-absolute-4">caja 4</div>
+        <div class="div-rojo-position-absolute-5">caja 5</div>
+    </div>
+
+
+    <div id="codigo-position-absolute-divs">
+        .div-rojo-position-absolute-1, .div-rojo-position-absolute-2, .div-rojo-position-absolute-3, .div-rojo-position-absolute-4{, .div-rojo-position-absolute-5<br>
+        background-color: red;<br>
+        width: 60px;<br>
+        height: 60px;<br>
+        position: absolute;<br>
+        opacity: 1;<br>
+        font-size: 20px;<br>
+    }</div>
+
+    <p id="p-center-id-especifico-position-absolute"><b class="b-importante">IMPORTANTE:</b>
+    si a un elemento le ponemos "position: absolute;", este subirá hasta llegar a la
+parte superior del DOM de la pagina al momento de definir el "top" del elemento, por
+lo que el elemento ya no ocupara espacio en la pantalla, pero en consecuencia subirá
+del todo y lo tendremos que bajar usando la propiedad "top" con miles del pixeles</p>
+
+<p id="p-sugerencia-position-absolute"><b class="b-sugerencia">Sugerencia:</b> usar
+"position: absolute;" solo cuando te quedes sin espacio</p>
+
+
+
+</div>
+
+<p id="p-1-position-fixed"><b>position: fixed;</b> sirve para que un elemento
+    siempre se quede en un lugar fijo de la pantalla y que no se mueva aunque
+hagamos scroll para arriba o para abajo</p>
+
+<div id="caja-ejemplos-position">
+
+    <div id="ejemplo-position-fixed">
+    
+        <p id="dato-position-fixed"><b class="b-dato">Dato:</b> al ponerle a un elemento "position: fixed;", este
+        dependerá del lugar del codigo HTML que lo hayas puesto, el ejemplo es que el
+    elemento de arriba a la derecha con "position: fixed;", esta posicionado en la linea
+    17 del codigo, y ahora estamos en la linea 370, a continuación el codigo del elemento
+    que sale arriba a la derecha:</p>
+    
+    <div id="codigo-elemento-position-fixed">
+        #position-fixed{<br>
+        color: #000;<br>
+        width: 100px;<br>
+        height: 100px;<br>
+        border-radius: 20px;<br>
+        position: fixed;<br>
+        background-color: rgb(255, 255, 255);<br>
+        padding: 25px;<br>
+        top: 20px;<br>
+        left: 1200px;<br>
+        box-shadow: 6px 10px 6px 1px #000;<br>
+        z-index: 1000;<br>
+    }</div>
+    
+    </div>
+
+    <div id="ejemplo-position-sticky">
+
+    
+        <p id="p-position-sticky"><b>position: sticky;</b> es algo similar a usar
+        "position: fixed;", "position: sticky; crea un elemento que va a cubrir la pantalla,
+    pero solo lo hace cuando el scroll de la pantalla pasa por encima de el, ejemplo:</p>
+
+    <a id="a-position-sticky" href="paginas/position-sticky.html" target="_blank">Click aquí para ver como se usa
+        "position: sticky;"
+    </a>
+
+    <p><b id="dato-position-sticky">Dato:</b></p>
+
+    </div>
+
+
+
+
+</div>
+
+
+</div>
+
+        </section>
+    </article>
+</div>
+
+
+</body>
+</html>
+
+
