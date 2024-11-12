@@ -17,7 +17,7 @@ button.addEventListener("click", (e) => {
 button.addEventListener("click", (e) => {
 
 if (username.value === CorrectUsername && password.value === CorrectPassword) {
-    window.location.href = "https://www.liceomartadonoso.cl";
+    window.location.href = "css3/css3.html";
 } else {
     alert("Usuario o contraseña incorrectos");
 }
