@@ -17,7 +17,7 @@ button.addEventListener("click", (e) => {
 button.addEventListener("click", (e) => {
 
 if (username.value === CorrectUsername && password.value === CorrectPassword) {
-    window.location.href = "css3/css3.html";
+    window.location.href = "css3/carpeta2/css3.html";
 } else {
     alert("Usuario o contraseña incorrectos");
 }
